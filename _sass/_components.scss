@@ -1,0 +1,40 @@
+.Dropcap {
+  font-size: 3rem;
+  float: left;
+  line-height: 1;
+  padding-right: 0.5rem;
+}
+
+.ResumeItem {
+  &-title {
+    margin-bottom: 0;
+  }
+  
+  &-subtitle {
+    color: $gray;
+    font-family: $sans-serif-font;
+    font-size: $small-font-size;
+    text-transform: uppercase;
+  }
+  
+  &-subtitle--secondary {
+    color: $gray-light;
+  }
+  
+  &-list {
+    list-style-type: circle;
+  }
+}
+
+.Note {
+  color: $gray-light;
+  display: block;
+  font-family: $sans-serif-font;
+  font-size: $small-font-size;
+  max-width: 75%;
+  text-transform: uppercase;
+  
+  @include media-query($on-phone) {
+    max-width: 100%;
+  }
+}

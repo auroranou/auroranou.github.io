@@ -4,50 +4,42 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: -apple-system, BlinkMacSystemFont, Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$sans-serif-font: Georgia, 'Times New Roman', 'MS Serif', serif;
+$base-font-family: Georgia, Garamond, 'Times New Roman', serif;
+$sans-serif-font:  -apple-system, BlinkMacSystemFont, Athelas, Avenir, 'Helvetica Neue', Helvetica, sans-serif;
+$monospace-font:   Courier, monospace;
 
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit:     2rem;
 
 $text-color:       #111;
 $background-color: #fafafa;
-$brand-color:      #2a7ae2;
+$accent-color:     #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$gray:             #444;
+$gray-dark:        #363636;
+$gray-light:       #bababa;
 
 // Width of the content area
 $content-width:    800px;
-
-$on-palm:          600px;
+$on-phone:         600px;
 $on-laptop:        800px;
 
 
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
-
-
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+  "base",
+  "layout",
+  "utility",
+  "components",
+  "syntax-highlighting"
 ;

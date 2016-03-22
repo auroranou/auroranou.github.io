@@ -1,0 +1,55 @@
+/* grid */
+
+@function col-width($num) {
+  @return ($num / 12) * 100%;
+}
+
+.row {
+  margin-left: -3rem;
+  
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.col {
+  display: inline-block;
+  float: left;
+  padding-left: 3rem;
+}
+
+@include media-query($on-phone) {
+  .row {
+    margin-left: -1rem;
+  }
+  
+  .col {
+    padding-left: 1rem;
+  }
+}
+
+@for $i from 1 to 13 {
+  @media only screen and (max-width: $on-phone) {
+    .small-#{$i}{
+      width: col-width($i);
+    }
+  }
+
+  @media only screen and (min-width: $on-phone + 1) and (max-width: $on-laptop) {
+    .med-#{$i}{
+      width: col-width($i);
+    }
+  }
+
+  @media screen and (min-width: $on-laptop + 1) {
+    .large-#{$i}{
+      width: col-width($i);
+    }
+  }
+}
