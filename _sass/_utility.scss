@@ -1,7 +1,9 @@
 /* grid */
 
+$numColumns: 12;
+
 @function col-width($num) {
-  @return ($num / 12) * 100%;
+  @return ($num / $numColumns) * 100%;
 }
 
 .row {
@@ -34,7 +36,7 @@
   }
 }
 
-@for $i from 1 to 13 {
+@for $i from 1 to ($numColumns + 1) {
   @media only screen and (max-width: $on-phone) {
     .small-#{$i}{
       width: col-width($i);

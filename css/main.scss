@@ -8,9 +8,9 @@ $base-font-family: Georgia, Garamond, 'Times New Roman', serif;
 $sans-serif-font:  -apple-system, BlinkMacSystemFont, Athelas, Avenir, 'Helvetica Neue', Helvetica, sans-serif;
 $monospace-font:   Courier, monospace;
 
-$base-font-size:   16px;
+$base-font-size:   18px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  $base-font-size * 0.75;
 $base-line-height: 1.5;
 
 $spacing-unit:     2rem;
@@ -21,7 +21,7 @@ $accent-color:     #2a7ae2;
 
 $gray:             #444;
 $gray-dark:        #363636;
-$gray-light:       #bababa;
+$gray-light:       #aaa;
 
 // Width of the content area
 $content-width:    800px;
