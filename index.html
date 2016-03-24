@@ -1,23 +1,22 @@
 ---
-layout: default
+layout: two-column
+title: Hi, I'm Aurora
+navtitle: Home
+weight: 1
 ---
 
-<div class="home">
+<article class="Section">
+  <p class="Section-description">
+    <span class="Dropcap">I</span> am currently a full-stack engineer at Washington, DC-based startup <a href="https://cove.is/index">cove</a>, where I work on maintaining our backend infrastructure and building usable productivity tools. I care a lot about order, system design, and sustainable, scalable processes.
+  </p>
 
-  <h1 class="page-heading">Posts</h1>
+  <img src="img/aurora-bw.jpg" alt="I like puppies." />
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <p class="Section-description">
+    <span class="Dropcap">P</span>rior to web development, I worked in international politics and higher education. I have contributed to publications and research on the <a href="">secular state</a>, and am also interested in issues of governance and human {rights, development, security}.
+  </p>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+  <p class="Section-description">
+    <span class="Dropcap">B</span>esides programming, I read a lot (and have worked on a few projects to facilitate that particular hobby), bang on my keyboard, kid myself that I practice yoga, and occasionally paint. I believe that technology should be used to promote social good and social justice, and would love to <a href="mailto:auroranou@gmail.com">chat about it</a> with you.
+  </p>
+</article>
