@@ -1,62 +1,4 @@
-.Footer {
-  background-color: $background-color;
-  color: $gray;
-  font-size: $small-font-size;
-  padding: 1.5rem 3rem;
-  
-  &-link {
-    margin-right: 0.5rem;
-    
-    a {
-      color: inherit;
-    }
-  }
-    
-  &-link:hover {
-    a {
-      color: $accent-color;
-    }
-
-    svg path {
-      fill: $accent-color;
-    }
-  }
-}
-
-.Nav {
-  font-family: $sans-serif-font;
-  margin-left: -2.25rem;
-  text-transform: uppercase;
-  
-  &-list {
-    margin-left: 0;
-  }
-  
-  &-list-item {
-    display: inline-block;
-    margin-right: 1rem;
-    
-    &--hidden {
-      display: none;
-    }
-  }
-  
-  &-list-item-link {
-    color: $gray-dark;
-    
-    &:active,
-    &:focus,
-    &:hover {
-      color: $accent-color;
-    }
-    
-    &--secondary {
-      color: $gray-light;
-    }
-  }
-}
-
-.Page {
+.page {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -64,8 +6,8 @@
   min-height: 100vh;
   width: 100%;
   
-  &-content {
-    padding: 4rem 3rem 2rem;
+  &__content {
+    padding: 2rem;
   }
   
   &-title {
@@ -73,36 +15,45 @@
   }
 }
 
-.Section {
-  margin-bottom: 1.5rem;
-  
-  &-description {
-    margin: 0.5rem 0 1.5rem 0;
+.section {
+  margin: 0 auto 1.5rem;
+  max-width: 40rem;
+
+  &--intro {
+    margin-top: 50vh;
+    transform: translateY(-25vh);
   }
-  
-  &-link {
-    font-family: $sans-serif-font;
-    font-size: $small-font-size;
-    margin-right: 1em;
+
+  &__description {
+    margin: 0 0 1.5rem;
+  }
+
+  &__link {
+    font-family: $font-family-sans;
+    font-size: $font-size-small;
+    font-weight: 500;
     text-transform: uppercase;
   }
-  
-  &-link--secondary {
+
+  &__link--secondary {
     color: $gray-light;
+    font-weight: $font-weight-base;
   }
-  
-  &-list {
-    margin-left: 0;
-    padding-top: 0.5em;
+
+  &__subtitle {
+    display: inline-block;
+
+    & + .section__link {
+      margin-left: 0.5rem;
+    }
   }
-  
-  &-title,
-  &-subtitle {
-    margin-bottom: 0;
+
+  &__title {
+
   }
 }
 
-@include media-query($on-phone) {
+@include media-query($mobile) {
   .Header-nav-list-item,
   .Section-link {
     display: block;

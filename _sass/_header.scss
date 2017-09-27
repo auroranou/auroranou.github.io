@@ -1,0 +1,26 @@
+.header--lg {
+  font-family: $font-family-sans;
+  margin: auto;
+  max-width: 40rem;
+}
+
+.logo--lg {
+  border: 3px solid $accent-color;
+  color: $accent-color;
+  font-size: 1.25rem;
+  font-weight: 600;
+  width: 10rem;
+
+  &__bottom,
+  &__top {
+    padding: 4px 16px;
+  }
+
+  &__top {
+    border-bottom: 3px solid $accent-color;
+  }
+}
+
+.logo--sm {
+
+}

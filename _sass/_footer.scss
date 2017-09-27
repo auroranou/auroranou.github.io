@@ -1,0 +1,14 @@
+.footer {
+  background-color: $background-color;
+  color: $gray;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: $font-family-sans;
+  font-size: $font-size-small;
+  justify-content: space-between;
+  padding: 1rem 2rem 1.5rem;
+
+  &__nav {
+    font-size: $font-size-large;
+  }
+}

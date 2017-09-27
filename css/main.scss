@@ -4,28 +4,31 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: Georgia, Garamond, 'Times New Roman', serif;
-$sans-serif-font:  -apple-system, BlinkMacSystemFont, Athelas, Avenir, 'Helvetica Neue', Helvetica, sans-serif;
-$monospace-font:   Courier, monospace;
+$font-family-base: Georgia, Palatino, Garamond, 'Times New Roman', serif;
+$font-family-sans: -apple-system, BlinkMacSystemFont, Athelas, Avenir, 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-mono: Courier, monospace;
 
-$base-font-size:   18px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.75;
-$base-line-height: 1.5;
+$font-size-base:   16px;
+$font-size-small:  14px;
+$font-size-large:  24px;
+
+$font-weight-base: 400;
+$line-height-base: 1.5;
 
 $spacing-unit:     2rem;
 
-$text-color:       #111;
-$background-color: #fafafa;
 $accent-color:     #2a7ae2;
+$background-color: #f8f8f8;
+$body-color:       #fefefe;
+$text-color:       #111;
 
-$gray:             #444;
+$gray:             #484848;
 $gray-dark:        #363636;
 $gray-light:       #aaa;
 
 // Width of the content area
 $content-width:    800px;
-$on-phone:         600px;
+$mobile:           600px;
 $on-laptop:        800px;
 
 
@@ -38,8 +41,9 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "base",
+  "footer",
+  "header",
   "layout",
   "utility",
-  "components",
   "syntax-highlighting"
 ;
