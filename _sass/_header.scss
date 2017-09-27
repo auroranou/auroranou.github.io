@@ -7,9 +7,16 @@
 .logo--lg {
   border: 3px solid $accent-color;
   color: $accent-color;
-  font-size: 1.25rem;
-  font-weight: 600;
+  display: inline-block;
+  font-size: $font-size-large;
+  font-weight: 500;
   width: 10rem;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
 
   &__bottom,
   &__top {

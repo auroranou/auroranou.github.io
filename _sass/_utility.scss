@@ -4,16 +4,24 @@
   text-transform: uppercase;
 }
 
+.font-sans {
+  font-family: $font-family-sans;
+}
+
 .font-sm {
   font-size: $font-size-small;
 }
 
 .font-md {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .font-lg {
-  font-size: 24px;
+  font-size: $font-size-large;
+}
+
+.margin-top {
+  margin-top: 2rem;
 }
 
 .reader-only {
