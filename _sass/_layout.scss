@@ -9,10 +9,6 @@
   &__content {
     padding: 2rem;
   }
-  
-  &-title {
-    border-top: 4px solid $text-color;
-  }
 }
 
 .section {
@@ -58,8 +54,12 @@
 }
 
 @include media-query($mobile) {
-  .Header-nav-list-item,
-  .Section-link {
-    display: block;
+  .section--intro {
+    margin-top: 2.25rem;
+    transform: none;
+  }
+
+  .section--resume {
+    margin-top: 2.25rem;
   }
 }

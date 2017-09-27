@@ -12,3 +12,13 @@
     font-size: $font-size-large;
   }
 }
+
+@include media-query($mobile) {
+  .footer{
+    padding-right: 1rem;
+
+    &__nav {
+      font-size: $font-size-small;
+    }
+  }
+}

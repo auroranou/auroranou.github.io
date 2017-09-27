@@ -10,7 +10,7 @@
   display: inline-block;
   font-size: $font-size-large;
   font-weight: 500;
-  width: 10rem;
+  width: 8em;
 
   &:active,
   &:focus,
@@ -30,4 +30,10 @@
 
 .logo--sm {
 
+}
+
+@include media-query($mobile) {
+  .logo--lg {
+    font-size: $font-size-base;
+  }
 }
