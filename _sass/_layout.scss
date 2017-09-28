@@ -16,12 +16,12 @@
   max-width: 40rem;
 
   &--intro {
-    margin-top: 40vh;
-    transform: translateY(-20vh);
+    margin-bottom: 6rem;
+    margin-top: 4rem;
   }
 
   &--resume {
-    margin-top: 20vh;
+    margin-top: 4rem;
   }
 
   &__description {
@@ -38,6 +38,12 @@
   &__link--secondary {
     color: $gray-light;
     font-weight: $font-weight-base;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $gray;
+    }
   }
 
   &__subtitle {

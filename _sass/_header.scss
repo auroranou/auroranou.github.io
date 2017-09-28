@@ -1,15 +1,13 @@
 .header {
   font-family: $font-family-sans;
-  margin: auto;
-  max-width: 40rem;
 }
 
 .logo {
   border: 3px solid $accent-color;
   color: $accent-color;
-  display: inline-block;
   font-size: $font-size-large;
   font-weight: 500;
+  margin: 2rem;
 
   &:active,
   &:focus,
@@ -63,5 +61,7 @@
 }
 
 @include media-query($mobile) {
+  .logo {
 
+  }
 }

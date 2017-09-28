@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Our variables
-$font-family-base: Georgia, Palatino, Garamond, 'Times New Roman', serif;
+$font-family-serif: Georgia, Palatino, Garamond, 'Times New Roman', serif;
 $font-family-sans: -apple-system, BlinkMacSystemFont, Athelas, Avenir, 'Helvetica Neue', Helvetica, sans-serif;
 $font-family-mono: Courier, monospace;
 
@@ -24,7 +24,7 @@ $text-color:       #111;
 
 $gray:             #484848;
 $gray-dark:        #363636;
-$gray-light:       #aaa;
+$gray-light:       #888;
 
 // Width of the content area
 $content-width:    800px;
