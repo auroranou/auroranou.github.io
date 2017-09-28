@@ -1,39 +1,67 @@
-.header--lg {
+.header {
   font-family: $font-family-sans;
   margin: auto;
   max-width: 40rem;
 }
 
-.logo--lg {
+.logo {
   border: 3px solid $accent-color;
   color: $accent-color;
   display: inline-block;
   font-size: $font-size-large;
   font-weight: 500;
-  width: 8em;
 
   &:active,
   &:focus,
   &:hover {
     color: $accent-color;
   }
+}
 
-  &__bottom,
-  &__top {
+.logo--lg {
+  width: 8em;
+
+  &__first,
+  &__last {
     padding: 4px 16px;
   }
 
-  &__top {
+  &__first {
     border-bottom: 3px solid $accent-color;
   }
 }
 
 .logo--sm {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 6em;
 
+  &__divider {
+    background-color: $accent-color;
+    height: 4rem;
+    left: calc(50% - 3px);
+    position: absolute;
+    transform: rotate(36deg);
+    top: -8px;
+    width: 3px;
+  }
+
+  &__first,
+  &__last {
+    display: inline-block;
+  }
+
+  &__first {
+    padding: 4px 8px 4px 16px;
+  }
+  
+  &__last {
+    padding: 4px 16px 4px 8px;
+    float: right;
+  }
 }
 
 @include media-query($mobile) {
-  .logo--lg {
-    font-size: $font-size-base;
-  }
+
 }
