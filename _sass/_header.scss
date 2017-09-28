@@ -21,7 +21,7 @@
 
   &__first,
   &__last {
-    padding: 4px 16px;
+    padding: 0.25rem 1rem;
   }
 
   &__first {
@@ -41,7 +41,7 @@
     left: calc(50% - 3px);
     position: absolute;
     transform: rotate(36deg);
-    top: -8px;
+    top: -0.5rem;
     width: 3px;
   }
 
@@ -51,17 +51,13 @@
   }
 
   &__first {
-    padding: 4px 8px 4px 16px;
+    padding: 0.25rem 0.5rem 0.25rem 1rem;
   }
   
   &__last {
-    padding: 4px 16px 4px 8px;
+    padding: 0.25rem 1rem 0.25rem 0.5rem;
     float: right;
   }
 }
 
-@include media-query($mobile) {
-  .logo {
-
-  }
-}
+@include media-query($mobile) {}

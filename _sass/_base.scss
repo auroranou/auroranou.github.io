@@ -125,10 +125,8 @@ a {
  */
 blockquote {
   color: $gray;
-  border-left: 4px solid $gray-light;
+  border-left: 0.25rem solid $gray-light;
   padding-left: $spacing-unit / 2;
-  font-size: 18px;
-  letter-spacing: -1px;
   font-style: italic;
 
   > :last-child {
@@ -144,6 +142,7 @@ code {
   border: 1px solid $gray-light;
   border-radius: 3px;
   background-color: #eef;
+  font-family: $font-family-mono;
 }
 
 code {
