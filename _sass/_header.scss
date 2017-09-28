@@ -1,9 +1,11 @@
+$logo-border-width: 3px;
+
 .header {
   font-family: $font-family-sans;
 }
 
 .logo {
-  border: 3px solid $accent-color;
+  border: $logo-border-width solid $accent-color;
   color: $accent-color;
   font-size: $font-size-large;
   font-weight: 500;
@@ -25,7 +27,7 @@
   }
 
   &__first {
-    border-bottom: 3px solid $accent-color;
+    border-bottom: $logo-border-width solid $accent-color;
   }
 }
 
@@ -38,11 +40,11 @@
   &__divider {
     background-color: $accent-color;
     height: 4rem;
-    left: calc(50% - 3px);
+    left: calc(50% - #{$logo-border-width});
     position: absolute;
     transform: rotate(36deg);
     top: -0.5rem;
-    width: 3px;
+    width: $logo-border-width;
   }
 
   &__first,
