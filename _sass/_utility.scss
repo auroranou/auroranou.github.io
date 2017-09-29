@@ -7,7 +7,7 @@
 }
 
 .font-sm {
-  font-size: $font-size-small;
+  font-size: var(--font-size-small);
 }
 
 .font-md {
@@ -15,7 +15,7 @@
 }
 
 .font-lg {
-  font-size: $font-size-large;
+  font-size: var(--font-size-large);
 }
 
 .margin-top {

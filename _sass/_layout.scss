@@ -30,7 +30,7 @@
 
   &__link {
     font-family: $font-family-sans;
-    font-size: $font-size-small;
+    font-size: var(--font-size-small);
     font-weight: 500;
     text-transform: uppercase;
   }
@@ -53,10 +53,6 @@
       margin-left: 0.5rem;
     }
   }
-
-  &__title {
-
-  }
 }
 
 @include media-query($mobile) {
@@ -67,5 +63,14 @@
 
   .section--resume {
     margin-top: 2.25rem;
+  }
+
+  .section__title,
+  .section__subtitle {
+    display: block;
+  }
+
+  .section__subtitle + .section__link {
+    margin-left: 0;
   }
 }

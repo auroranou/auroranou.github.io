@@ -8,10 +8,6 @@ $font-family-serif: Georgia, Palatino, Garamond, 'Times New Roman', serif;
 $font-family-sans: -apple-system, BlinkMacSystemFont, Athelas, Avenir, 'Helvetica Neue', Helvetica, sans-serif;
 $font-family-mono: Courier, monospace;
 
-$font-size-base:   16px;
-$font-size-small:  14px;
-$font-size-large:  24px;
-
 $font-weight-base: 400;
 $line-height-base: 1.5;
 
@@ -29,8 +25,29 @@ $gray-light:       #888;
 // Width of the content area
 $content-width:    800px;
 $mobile:           600px;
-$on-laptop:        800px;
+$laptop:           800px;
 
+:root {
+  --font-size-base: 16px;
+  --font-size-large: 24px;
+  --font-size-small: 14px;
+}
+
+@media screen and (max-width: $mobile) {
+  :root {
+    --font-size-base: 14px;
+    --font-size-large: 20px;
+    --font-size-small: 12px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  :root {
+    --font-size-base: 18px;
+    --font-size-large: 28px;
+    --font-size-small: 16px;
+  }
+}
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {

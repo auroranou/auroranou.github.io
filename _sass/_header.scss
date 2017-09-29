@@ -7,7 +7,7 @@ $logo-border-width: 3px;
 .logo {
   border: $logo-border-width solid $accent-color;
   color: $accent-color;
-  font-size: $font-size-large;
+  font-size: var(--font-size-large);
   font-weight: 500;
   margin: 2rem;
 
