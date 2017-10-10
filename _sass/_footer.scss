@@ -11,6 +11,12 @@
   &__nav {
     font-size: var(--font-size-large);
   }
+
+  &__nav__link a {
+    &:after {
+      content: none;
+    }
+  }
 }
 
 @include media-query($mobile) {

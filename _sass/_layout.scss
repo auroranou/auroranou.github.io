@@ -33,6 +33,10 @@
     font-size: var(--font-size-small);
     font-weight: 500;
     text-transform: uppercase;
+
+    &:after {
+      height: 1px;
+    }
   }
 
   &__link--secondary {
@@ -43,6 +47,16 @@
     &:focus,
     &:hover {
       color: $gray;
+    }
+
+    &:after {
+      background-color: $gray-light;
+    }
+
+    &:hover {
+      &:after {
+        background-color: $gray;
+      }
     }
   }
 

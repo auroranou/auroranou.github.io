@@ -110,13 +110,32 @@ li {
  */
 a {
   color: $accent-color;
+  position: relative;
   text-decoration: none;
   transition: color 200ms ease-in-out;
+
+  &:after {
+    background-color: $accent-color;
+    bottom: -1px;
+    content: '';
+    height: 2px;
+    position: absolute;
+    right: 0;
+    transition: all 200ms linear;
+    width: 100%;
+  }
   
   &:active,
   &:focus,
   &:hover {
     color: darken($accent-color, 25%);
+  }
+
+  &:hover {
+    &::after {
+      background-color: darken($accent-color, 25%);
+      width: 0;
+    }
   }
 }
 

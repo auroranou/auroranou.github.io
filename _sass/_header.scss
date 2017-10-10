@@ -16,6 +16,10 @@ $logo-border-width: 3px;
   &:hover {
     color: $accent-color;
   }
+
+  &:after {
+    content: none;
+  }
 }
 
 .logo--lg {
