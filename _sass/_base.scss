@@ -104,7 +104,7 @@ a {
   text-decoration: none;
   transition: color 200ms ease-in-out;
 
-  &:after {
+  &::after {
     background-color: $accent-color;
     bottom: -2px;
     content: '';

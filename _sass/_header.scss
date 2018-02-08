@@ -12,5 +12,15 @@
     position: absolute;
     text-align: center;
     width: 4rem;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: #fff;
+    }
+
+    &::after {
+      content: none;
+    }
   }
 }
