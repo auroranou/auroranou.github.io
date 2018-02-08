@@ -4,8 +4,8 @@
     grid-template-areas: "header header header"
                          "content-padding-left content content-padding-right"
                          "footer footer footer";
-    grid-template-columns: minmax(10rem, 15rem) 2fr minmax(10rem, 15rem);
-    grid-template-rows: 10rem 1fr 5rem;
+    grid-template-columns: 1fr 40rem 1fr;
+    grid-template-rows: 20vh 1fr 10vh;
   }
 
   .header {
@@ -14,10 +14,24 @@
 
   .page__content {
     grid-area: content;
+    min-height: 70vh;
   }
 
   .footer {
     grid-area: footer;
+  }
+
+  @media screen and (max-width: $tablet) {
+    .page {
+      grid-template-columns: 2rem 1fr 2rem;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .page__content {
+      grid-column: 1 / 4;
+      grid-row: 2;
+    }
   }
 }
 
@@ -27,5 +41,9 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     min-height: 100vh;
+  }
+
+  .page__content {
+    max-width: 40rem;
   }
 }

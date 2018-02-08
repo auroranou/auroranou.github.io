@@ -10,13 +10,10 @@ html {
 * Reset some basic elements
 */
 body {
-  background: $body-color;
+  background-color: $accent-color;
   color: $text-color;
   font-family: $font-family-sans;
   font-feature-settings: "kern" 1;
-  -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
   font-kerning: normal;
   font-size: var(--font-size-base);
   font-weight: $font-weight-base;
@@ -79,13 +76,6 @@ h4, h6 {
   text-transform: uppercase;
 }
 
-@include media-query($mobile) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.25rem; }
-  h4 { font-size: 1.125rem}
-}
-
 /**
  * Lists
  */
@@ -109,14 +99,14 @@ li {
  * Links
  */
 a {
-  color: $accent-color;
+  color: $text-color;
   position: relative;
   text-decoration: none;
   transition: color 200ms ease-in-out;
 
   &:after {
     background-color: $accent-color;
-    bottom: -1px;
+    bottom: -2px;
     content: '';
     height: 2px;
     position: absolute;
@@ -128,12 +118,12 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: darken($accent-color, 25%);
+    color: $accent-color;
   }
 
   &:hover {
     &::after {
-      background-color: darken($accent-color, 25%);
+      background-color: $accent-color;
       width: 0;
     }
   }
