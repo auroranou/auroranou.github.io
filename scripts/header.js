@@ -1,28 +1,37 @@
 'use strict';
 
-let headerEl = document.querySelector('.header');
-let logoEl = document.querySelector('.logo--lg');
+document.addEventListener('DOMContentLoaded', function () {
+  let introEl = document.querySelector('.intro .intro--variable');
+  if (!introEl) return;
 
-function showSmallHeader() {}
+  let onMouseEnter = throttle(function () {
+    introEl.innerHTML = " a human person just trying her best.";
+  }, 500);
 
-function showLargeHeader() {}
+  let onMouseLeave = throttle(function () {
+    introEl.innerHTML = " a front end developer in Washington, DC."
+  }, 500);
 
-// intersection observer
-let options = {
-  threshold: 0
-};
+  introEl.addEventListener('mouseenter', onMouseEnter);
+  introEl.addEventListener('mouseleave', onMouseLeave);
+});
 
-function onObserver(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      showSmallHeader();
-    } else {
-      showLargeHeader();
+function throttle(func) {
+  var wait = arguments.length <= 1 || arguments[1] === undefined ? 100 : arguments[1];
+
+  var timer = null;
+  return function () {
+    var _this = this;
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-  });
-}
 
-window.addEventListener('load', function(event) {
-  let observer = new IntersectionObserver(onObserver, options);
-  observer.observe(headerEl);
-}, false);
+    if (timer === null) {
+      timer = setTimeout(function () {
+        func.apply(_this, args);
+        timer = null;
+      }, wait);
+    }
+  };
+}
