@@ -58,9 +58,10 @@ $laptop:           800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "base",
+  "layout",
   "footer",
   "header",
-  "layout",
+  "page",
   "utility",
   "syntax-highlighting"
 ;
