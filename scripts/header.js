@@ -1,8 +1,10 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
-  let introEl = document.querySelector('.intro .intro--variable');
-  if (!introEl) return;
+  let introWrapper = document.querySelector('h1.intro');
+  if (!introWrapper) return;
+
+  let introEl = introWrapper.querySelector('.intro--variable');
 
   let onMouseEnter = throttle(function () {
     introEl.innerHTML = " a human person just trying her best.";
@@ -12,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     introEl.innerHTML = " a front end developer in Washington, DC."
   }, 500);
 
-  introEl.addEventListener('mouseenter', onMouseEnter);
-  introEl.addEventListener('mouseleave', onMouseLeave);
+  introWrapper.addEventListener('mouseenter', onMouseEnter);
+  introWrapper.addEventListener('mouseleave', onMouseLeave);
 });
 
 function throttle(func) {
