@@ -1,4 +1,4 @@
-# site
+# personal site
 
 Uses Jekyll + Github Pages.
 
