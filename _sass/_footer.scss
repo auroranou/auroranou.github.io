@@ -22,7 +22,7 @@
 
 @include media-query($mobile) {
   .footer{
-    padding-right: 1rem;
+    padding: 1rem;
 
     &__nav {
       font-size: var(--font-size-small);

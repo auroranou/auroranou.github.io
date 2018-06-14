@@ -1,31 +1,63 @@
 .page {
   background-color: $body-color;
+  border-top: 4px solid $accent-color;
 }
 
 .page__content {
   padding: 2rem;
 }
 
-.intro {
-  border-bottom: 1px solid $gray-light;
+.page__title {
+  @extend h1;
   font-family: $font-family-serif;
   line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.article {
+  margin-bottom: 1rem;
+
+  &__title {
+    @extend h2;
+  }
+}
+
+/* Only used on home page */
+.intro {
+  @extend .page__title;
+  border-bottom: 1px solid $gray-light;
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
 }
 
 .section {
-  margin: 0 auto 1.5rem;
+  margin-bottom: 0.75rem;
+
+  &__title {
+    @extend h3;
+  }
+
+  &__subtitle {
+    @extend h4;
+    font-size: var(--font-size-small);
+    text-transform: uppercase;
+  }
+
+  &__title + .section__subtitle {
+    padding-top: 0;
+  }
 
   &__link {
     font-family: $font-family-sans;
-    font-size: var(--font-size-small);
     font-weight: 500;
-    text-transform: uppercase;
 
-    &:after {
+    &::after {
       height: 1px;
     }
+  }
+
+  &__link + .section__link {
+    margin-left: 0.25rem;
   }
 
   &__link--secondary {
@@ -38,42 +70,20 @@
       color: $gray;
     }
 
-    &:after {
+    &::after {
       background-color: $gray-light;
     }
 
     &:hover {
-      &:after {
+      &::after {
         background-color: $gray;
       }
-    }
-  }
-
-  &__subtitle {
-    display: inline-block;
-
-    & + .section__link {
-      margin-left: 0.5rem;
     }
   }
 }
 
 @include media-query($mobile) {
-  .section--intro {
-    margin-top: 2.25rem;
-    transform: none;
-  }
-
-  .section--resume {
-    margin-top: 2.25rem;
-  }
-
-  .section__title,
-  .section__subtitle {
-    display: block;
-  }
-
-  .section__subtitle + .section__link {
-    margin-left: 0;
+  .intro {
+    font-size: 2rem;
   }
 }

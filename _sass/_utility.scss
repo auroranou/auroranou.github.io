@@ -1,3 +1,8 @@
+.bulleted {
+  list-style-type: initial;
+  margin-left: 2rem;
+}
+
 .caps {
   text-transform: uppercase;
 }
@@ -26,8 +31,16 @@
   display: none;
 }
 
+.semibold {
+  font-weight: 500;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-secondary {
+  color: $gray-light;
 }
 
 .hide-mobile {

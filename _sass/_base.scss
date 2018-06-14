@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
@@ -10,7 +10,6 @@ html {
 * Reset some basic elements
 */
 body {
-  background-color: $accent-color;
   color: $text-color;
   font-family: $font-family-sans;
   font-feature-settings: "kern" 1;
@@ -51,16 +50,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $font-weight-base;
   line-height: 1;
   margin-bottom: 0.5rem;
-  padding-top: 1rem;
+  padding-top: 0.75rem;
 }
 
 h1 {
   font-size: 2.25rem;
+  padding-top: 1rem;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 500;
+  padding-top: 1rem;
 }
 
 h3 {

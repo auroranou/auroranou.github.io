@@ -5,7 +5,7 @@
                          "content-padding-left content content-padding-right"
                          "footer footer footer";
     grid-template-columns: 1fr 40rem 1fr;
-    grid-template-rows: 20vh 1fr 10vh;
+    grid-template-rows: 10vh 1fr 10vh;
   }
 
   .header {
@@ -13,8 +13,11 @@
   }
 
   .page__content {
+    display: flex;
     grid-area: content;
-    min-height: 70vh;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: 80vh;
   }
 
   .footer {
