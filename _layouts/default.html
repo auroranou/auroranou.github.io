@@ -4,5 +4,7 @@
   <body>
     {{ content }}
   </body>
-  <script src='scripts/header.js'></script>
+  {% if page.weight == 1 %}
+    <script src='scripts/header.js'></script>
+  {% endif %}
 </html>
