@@ -54,7 +54,8 @@ a:hover::after {
   height: calc(100vh - 96px);
   justify-content: center;
   margin: auto;
-  max-width: 640px;
+  padding: 28px;
+  max-width: 696px;
 }
 
 .content__title {
